@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import {Modal, Table} from 'react-bootstrap'
+import logo from './../../assets/img/logo.png'
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -40,7 +41,8 @@ const Navbar = () => {
   return (
     <div style={{cursor:'pointer',background:'#b80000'}} className=' border-bottom  py-sm-1 py-3 px-2 px-sm-5  d-flex  align-items-center  justify-content-between  text-light'>
       <NavLink className='text-decoration-none ' to={'/'}>
-        <h2 className='logo  text-light ' >Delight Myanmar</h2>
+        <img src={logo} alt="logo" height={'60px'}/>
+        {/* <h2 className='logo  text-light ' >Delight Myanmar</h2> */}
       </NavLink>
       <div className='d-flex gap-2  gap-sm-4 align-items-center '>
         {/*  Login And Register Btn

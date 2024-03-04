@@ -1,5 +1,5 @@
 .accordion-title{
-    color: goldenrod;
+    color: #b80000;
     margin-bottom: 0;
 }
 
@@ -10,8 +10,22 @@
     margin-bottom: 10px;
     margin-left: 5px;
     padding: 5px;
-    border: 1px solid goldenrod;
+    border: 1px solid #b80000;
 }
 label{
-    color: gold !important;
+    color: #b80000 !important;
 }
+
+.form-borders{
+    border: 1px solid #b80000;
+}
+
+.form-file::file-selector-button {
+    color: white; /* Change to your desired text color */
+    background-color: #b80000; /* Change to your desired background color */
+  }
+
+.form-file:hover::file-selector-button {
+    color: white; /* Change to your desired text color */
+    background-color: #b80000 !important; /* Change to your desired background color */
+  }

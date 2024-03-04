@@ -8,9 +8,12 @@ import deposit from './../assets/img/playerInfo/deposit.png';
 import transfer from './../assets/img/playerInfo/transfer.png';
 import withdraw from './../assets/img/playerInfo/withdraw.png';
 import wallet from './../assets/img/footerIcons/wallet.png';
-
+import { FaMoneyBill } from "react-icons/fa";
+import { FaMoneyBillTransfer } from "react-icons/fa6";
+import { BiMoneyWithdraw } from "react-icons/bi";
 import './../assets/css/deposit.css';
 import { useSearchParams } from 'react-router-dom';
+import { FaHistory } from "react-icons/fa";
 
 const Deposit = () => {
   const [searchParams]=useSearchParams();
@@ -59,7 +62,9 @@ const Deposit = () => {
       className="mb-3 flex-nowarp"
       fill
     >
-      <Tab eventKey="deposit" className="custom-tab-menu nav-tabs" title={<><img src={deposit} alt="deposit" className="custom-tab-menu-icon" /> <div className='text-white'>ငွေသွင်း</div></>}>
+      <Tab eventKey="deposit" className="custom-tab-menu nav-tabs" title={<>
+        <FaMoneyBill size={30} />
+     <div className=''>ငွေသွင်း</div></>}>
         <div className="custom-tab-content">
           {
             <>
@@ -126,7 +131,8 @@ const Deposit = () => {
           }
         </div>
       </Tab>
-      <Tab eventKey="transfer" className="custom-tab-menu" title={<><img src={transfer} alt="Transfer" className="custom-tab-menu-icon"/> <div className='text-white'>transfer</div></>}>
+      <Tab eventKey="transfer" className="custom-tab-menu" title={<> 
+      <FaMoneyBillTransfer size={30} /> <div className=''>transfer</div></>}>
         <div className="custom-tab-content">
           {
             <Form>
@@ -153,7 +159,8 @@ const Deposit = () => {
           }
         </div>
       </Tab>
-      <Tab eventKey="withdraw" className="custom-tab-menu" title={<><img src={withdraw} alt="Withdraw" className="custom-tab-menu-icon"/> <div className='text-white'>withdraw</div></>}>
+      <Tab eventKey="withdraw" className="custom-tab-menu" title={<>
+      <BiMoneyWithdraw size={30} /> <div className=''>withdraw</div></>}>
         <div className="custom-tab-content">
           {
             <Form>
@@ -177,7 +184,8 @@ const Deposit = () => {
           }
         </div>
       </Tab>
-      <Tab eventKey="history" className="custom-tab-menu" title={<><img src={withdraw} alt="Histpry" className="custom-tab-menu-icon" /> <div className='text-white'>history</div></>} >
+      <Tab eventKey="history" className="custom-tab-menu" title={<>
+      <FaHistory size={28} /> <div className=''>history</div></>} >
         <div className="custom-tab-content">
           {
             <Form>

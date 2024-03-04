@@ -9,11 +9,14 @@ body{
     overflow-x: hidden !important;
 }
 .modal-content{
-    background: #00354D;
+    background: #FDD9D9;
     border: 1px solid #ffc1078a;
     box-shadow: 0px 3px 14px -5px #ffc107;
 }
 .table-dark{
     background: grey !important;
-    --bs-table-bg:grey !important;
+    --bs-table-bg:rgb(159, 158, 158) !important;
+}
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-bg-type:#912a1a   !important;
 }

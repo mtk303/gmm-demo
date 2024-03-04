@@ -14,11 +14,11 @@ const Footer = () => {
         {img:profile,title:'Profile',link:'/profile'},
     ]
   return (
-    <footer className=' rounded-top-5 px-2 px-sm-5 py-3 fixed-bottom   z-3 d-flex  align-items-center justify-content-between  '>
+    <footer style={{background:'#b80000'}} className=' rounded-top-5 px-2 px-sm-5 py-3 fixed-bottom   z-3 d-flex  align-items-center justify-content-between  '>
         {footerIcons.map((item)=>{
-            return <NavLink to={item.link} className='text-light d-flex flex-column text-center   align-align-items-center  text-decoration-none '>
+            return <NavLink to={item.link} className=' d-flex flex-column text-center   align-align-items-center  text-decoration-none '>
                 <img src={item.img} className='footerImg mx-auto ' />
-                <span className='footerTitle'>{item.title}</span>
+                <span className='footerTitle text-light '>{item.title}</span>
             </NavLink>
         })}
     </footer>

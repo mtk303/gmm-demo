@@ -60,9 +60,9 @@ function HomeTabs() {
           <Nav variant="pills" className="flex-column">
               <Nav.Item>
             {tabs.map((tab)=>{
-            return <Nav.Link className='border rounded-3 mb-1 py-0 py-sm-1 mb-sm-2 px-0 d-flex flex-column align-items-center ' eventKey={tab.id}>
+            return <Nav.Link  className='categoryCard border rounded-3 mb-1 py-0 py-sm-1 mb-sm-2 px-0 d-flex flex-column align-items-center ' eventKey={tab.id}>
                 <img  className='h-lg-50' src={tab.img} />
-                <span className='tabTitle text-center text-light'>{tab.title}</span>
+                <span className='tabTitle text-center text-light '>{tab.title}</span>
             </Nav.Link>
              })}
           </Nav.Item>

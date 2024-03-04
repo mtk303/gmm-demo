@@ -18,7 +18,7 @@ function PromotionPage() {
     ]
   return (
     <>
-    <h1 className="text-center text-light mt-4 mb-lg-5">Promotions</h1>
+    <h1 className="text-center  mt-4 mb-lg-5">Promotions</h1>
         <Tabs
       defaultActiveKey="All"
       id="uncontrolled-tab-example"

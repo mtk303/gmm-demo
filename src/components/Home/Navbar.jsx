@@ -38,9 +38,9 @@ const Navbar = () => {
         {id:7,title:'SEXY BACCARAT',value:'0.00'},
     ];
   return (
-    <div style={{cursor:'pointer'}} className='border-bottom  py-sm-1 py-3 px-2 px-sm-5  d-flex  align-items-center  justify-content-between '>
+    <div style={{cursor:'pointer',background:'#b80000'}} className=' border-bottom  py-sm-1 py-3 px-2 px-sm-5  d-flex  align-items-center  justify-content-between  text-light'>
       <NavLink className='text-decoration-none ' to={'/'}>
-        <h2 className='logo' style={{color:'gold'}}>AsiaBetSlot</h2>
+        <h2 className='logo  text-light ' >Delight Myanmar</h2>
       </NavLink>
       <div className='d-flex gap-2  gap-sm-4 align-items-center '>
         {/*  Login And Register Btn
@@ -48,15 +48,15 @@ const Navbar = () => {
         <button className='btn btn-warning   text-uppercase fw-bold px-5'>Register</button>
         */}
         <button className='border border-none bg-transparent' style={{outline:'none'}} onClick={handleShow}>
-          <i className=" fa-solid fa-wallet text-light "></i> 
+          <i className=" fa-solid fa-wallet  text-light "></i> 
         </button>
-        <div className='text-light d-flex align-items-center flex-nowrap '>
-            <i   className="fa-solid fa-life-ring text-light"></i>
+        <div className='  d-flex align-items-center flex-nowrap '>
+            <i   className="fa-solid fa-life-ring  text-light "></i>
             <span className='mx-2 fw-bolder '>: 0</span>
         </div>
-        <NavLink to={'/profile'}><i  className="fa-solid fa-user  text-light"></i></NavLink>
-        <NavLink to={'/incomeletter'}><i   class="fa-solid fa-comment-dots text-light"></i></NavLink>
-        <i  class="fa-solid fa-right-from-bracket text-light"></i>
+        <NavLink to={'/profile'}><i  className="fa-solid fa-user text-light   "></i></NavLink>
+        <NavLink to={'/incomeletter'}><i   className="text-light  fa-solid fa-comment-dots  "></i></NavLink>
+        <i  class="fa-solid fa-right-from-bracket  "></i>
       </div>
       <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>

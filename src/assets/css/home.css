@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Pacifico&display=swap');
 body{
     margin-bottom: 200px;
+    background: #dddddd;
+    color:#000 !important;
+}
+.categoryCard{
+    background: linear-gradient(90deg, rgba(121, 0, 0, 1) 0%, rgba(214, 0, 0, 1) 52%, rgba(255, 0, 0, 1) 100%);
+}
+.logo{
+    letter-spacing: 1px;
+    font-family: "Concert One", sans-serif;
+  
+}
+a{
+    color: #000 !important;
 }
 
 .fa-solid{
@@ -20,9 +34,8 @@ footer{
    object-fit: cover;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-    background: transparent !important;
-    border: 2px solid goldenrod !important;
-    box-shadow: 0px 3px 14px -5px #ffc107;
+    border: 3px solid #6e0903  !important;
+    /* box-shadow: 0px 3px 14px -5px #b80000; */
 }
 .fade:not(.show){
     display: none !important;

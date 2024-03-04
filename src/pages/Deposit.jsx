@@ -14,6 +14,7 @@ import { BiMoneyWithdraw } from "react-icons/bi";
 import './../assets/css/deposit.css';
 import { useSearchParams } from 'react-router-dom';
 import { FaHistory } from "react-icons/fa";
+import { FaWallet } from "react-icons/fa";
 
 const Deposit = () => {
   const [searchParams]=useSearchParams();
@@ -51,7 +52,7 @@ const Deposit = () => {
   return (
     <>
 
-      <div className='ms-md-5 ms-3' style={{color:'#ddd'}}>
+      <div className='ms-md-5 ms-3' style={{color:'#333'}}>
         <small>လက်ကျန်ငွေ ( MMK )</small>
         <p className='fw-bold'>0.00</p>
       </div>
@@ -74,18 +75,18 @@ const Deposit = () => {
                   <small>လက်ကျန်ငွေ</small>
                   <span>Click to view more</span>
                 </Accordion.Header>
-                <Accordion.Body className='bg-dark text-white outline-none border-none'>
+                <Accordion.Body className='text-white outline-none border-none' style={{background:'#ddd'}}>
                   <div>
                     <div className='d-flex justify-content-center align-items-center'>
-                      <img src={wallet} style={{width:'30px'}} alt="" />
-                      <p className='mx-2 fw-bold'>ပင်မ ပိုက်ဆံအိတ်</p>
+                    <FaWallet size={30}/>
+                      <p className='mx-2 fw-bold text-dark'>ပင်မ ပိုက်ဆံအိတ်</p>
                     </div>
 
                     <div className='d-flex justify-content-center align-items-center flex-wrap'>
                       {accordionMenu.map((menu => (
                         <div className='accordion-div' key={menu.id}>
                         <p className='accordion-title'>{menu.title}</p>
-                        <small>{menu.value}</small>
+                        <small className='text-dark'>{menu.value}</small>
                         </div>
                       ) ))}
 
@@ -98,29 +99,29 @@ const Deposit = () => {
 
               <Form>
               <Form.Group className="mb-3 mx-md-5" controlId="exampleForm.ControlInput1">
-                <h6 className='text-warning mt-4'>ဘဏ်</h6>
-                <Form.Select aria-label="Default select example" className='form-control-input'>
-                  <option value={''}>Please select Bank</option>
+                <h6 className='text-danger mt-4'>ဘဏ်</h6>
+                <Form.Select aria-label="Default select example" className='form-control-input  form-borders'>
+                  <option value={''} >Please select Bank</option>
                   {banks.map((bank)=>{
-                    return <option value={bank}>{bank}</option>
+                    return <option value={bank} className='text-dark'>{bank}</option>
                   })}
                 </Form.Select>
               </Form.Group>
               <Form.Group className="mb-3 mx-md-5" controlId="exampleForm.ControlInput2">
                 <Form.Label>ပမာဏ</Form.Label>
-                <Form.Control className='form-control-input' type="email" placeholder="အနည်းဆုံး အများဆုံး = 100 - 1,000,000" />
+                <Form.Control className='form-control-input form-borders' type="email" placeholder="အနည်းဆုံး အများဆုံး = 100 - 1,000,000" />
               </Form.Group>
               <Form.Group className="mb-3 mx-md-5" controlId="exampleForm.ControlInput3">
                 <Form.Label>အကိုးအကား နံပတ်</Form.Label>
-                <Form.Control className='form-control-input' type="email" placeholder="" />
+                <Form.Control className='form-control-input form-borders' type="email" placeholder="" />
               </Form.Group>
               <Form.Group className="mb-3 mx-md-5" controlId="exampleForm.ControlInput4">
                 <Form.Label>အရောင်းမြင့်တင်ရေး</Form.Label>
-                <Form.Control className='form-control-input' type="email" placeholder="" />
+                <Form.Control className='form-control-input form-borders' type="email" placeholder="" />
               </Form.Group>
               <Form.Group className="mb-3 mx-md-5" controlId="formFileSm">
                 <Form.Label>ငွေလက်ခံဖြတ်ပိုင်း</Form.Label>
-                <Form.Control className='form-control-input' type="file" size="sm" />
+                <Form.Control className='form-control-input form-file' type="file" size="sm" />
               </Form.Group>
 
               <div className='d-flex justify-content-center'>
@@ -138,19 +139,19 @@ const Deposit = () => {
             <Form>
             <Form.Group className="mb-3 mx-5" controlId="profileForm.ControlInput1">
               <Form.Label>ပင်မ ပိုက်ဆံအိတ်</Form.Label>
-              <Form.Control className='form-control-input' type="email" placeholder="0.00" />
+              <Form.Control className='form-control-input form-borders' type="email" placeholder="0.00" />
             </Form.Group>
             <Form.Group className="mb-3 mx-5" controlId="profileForm.ControlInput2">
               <Form.Label>from</Form.Label>
-              <Form.Control className='form-control-input' type="email" placeholder="ကျေးဇူးပြုရ်ျ  ရွေးချယ်ပါ" />
+              <Form.Control className='form-control-input form-borders' type="email" placeholder="ကျေးဇူးပြုရ်ျ  ရွေးချယ်ပါ" />
             </Form.Group>
             <Form.Group className="mb-3 mx-5" controlId="profileForm.ControlInput3">
               <Form.Label>သို့</Form.Label>
-              <Form.Control className='form-control-input' type="email" placeholder="" />
+              <Form.Control className='form-control-input form-borders' type="email" placeholder="" />
             </Form.Group>
             <Form.Group className="mb-3 mx-5" controlId="profileForm.ControlInput3">
               <Form.Label>လွဲပြောင်းခြင်း</Form.Label>
-              <Form.Control className='form-control-input' type="email" placeholder="" />
+              <Form.Control className='form-control-input form-borders' type="email" placeholder="" />
             </Form.Group>
             <div className='d-flex justify-content-center'>
             <button className='profile-btn w-75'>တင်သွင်းသည်</button>
@@ -166,19 +167,19 @@ const Deposit = () => {
             <Form>
             <Form.Group className="mb-3 mx-5" controlId="withdrawForm.ControlInput1">
               <Form.Label>ဘဏ်</Form.Label>
-              <Form.Control className='form-control-input' type="text" placeholder="" required/>
+              <Form.Control className='form-control-input form-borders' type="text" placeholder="" required/>
             </Form.Group>
             <Form.Group className="mb-3 mx-5" controlId="withdrawForm.ControlInput2">
               <Form.Label>ဘဏ် အကောင့်အမည်</Form.Label>
-              <Form.Control className='form-control-input' type="text" placeholder="" required/>
+              <Form.Control className='form-control-input form-borders' type="text" placeholder="" required/>
             </Form.Group>
             <Form.Group className="mb-3 mx-5" controlId="withdrawForm.ControlInput2">
               <Form.Label>ဘဏ် အကောင့်နံပတ်</Form.Label>
-              <Form.Control className='form-control-input' type="text" placeholder="" required/>
+              <Form.Control className='form-control-input form-borders' type="text" placeholder="" required/>
             </Form.Group>
             <Form.Group className="mb-3 mx-5" controlId="withdrawForm.ControlInput2">
               <Form.Label>ဘဏ်</Form.Label>
-              <Form.Control className='form-control-input' type="text" placeholder="" required/>
+              <Form.Control className='form-control-input form-borders' type="text" placeholder="" required/>
             </Form.Group>
           </Form>
           }
@@ -191,11 +192,11 @@ const Deposit = () => {
             <Form>
               <Form.Group className="mb-3 mx-5" controlId="rebateForm.ControlInput1">
               <Form.Label>အစီရင်ခံစာ အမျိုးအစား</Form.Label>
-              <Form.Control className='form-control-input' type="password" placeholder="" required/>
+              <Form.Control className='form-control-input form-borders' type="password" placeholder="" required/>
             </Form.Group>
             <Form.Group className="mb-3 mx-5" controlId="rebateForm.ControlInput1">
               <Form.Label>From / To</Form.Label>
-              <Form.Control className='form-control-input' type="password" placeholder="" required/>
+              <Form.Control className='form-control-input form-borders' type="password" placeholder="" required/>
               <div className='d-flex justify-content-center mt-5'>
               <button className='profile-btn w-75'>တင်သွင်းသည်</button>
               </div>

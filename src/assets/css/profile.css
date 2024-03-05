@@ -24,20 +24,20 @@
 
   .form-control-input , .form-control-input:focus {
     background-color: transparent;
-    color: #fff;
+    color: #333;
   }
 
   .form-control-input::placeholder{
-    color: #fff;
+    color: #666;
   }
 
   .profile-btn{
     padding: 5px;
-    color: goldenrod;
-    text-shadow: 0 0 3px goldenrod;
+    color: #b80000;
+    text-shadow: 0 0 3px #b80000;
     letter-spacing: 1px;
-    border: 2px solid #00354D;
-    box-shadow: 0 0 5px gold;
+    border: 2px solid #b80000;
+    /* box-shadow: 0 0 5px #b80000; */
     outline: none;
     background: transparent;
   }

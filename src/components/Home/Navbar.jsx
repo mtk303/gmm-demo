@@ -4,6 +4,8 @@ import { useState } from 'react'
 import {Modal, Table} from 'react-bootstrap'
 import logo from './../../assets/img/logo.png'
 
+import { IoLogOut } from "react-icons/io5";
+
 const Navbar = () => {
   const [show, setShow] = useState(false);
 
@@ -49,14 +51,19 @@ const Navbar = () => {
         <button className=' btn me-4 btn-outline-warning  text-uppercase fw-bold px-5'>Login</button>
         <button className='btn btn-warning   text-uppercase fw-bold px-5'>Register</button>
         */}
-        <button className='border border-none bg-transparent' style={{outline:'none'}} onClick={handleShow}>
+        
+        <button className='btn text-light  text-uppercase fw-bold px-5 d-sm-block d-none' style={{background:'#8a2424'}}>Log out</button>
+        <div className='d-sm-none d-block'>
+        <IoLogOut size={30} style={{color:'#ccc'}} />
+        </div >
+        {/* <button className='border border-none bg-transparent' style={{outline:'none'}} onClick={handleShow}>
           <i className=" fa-solid fa-wallet  text-light "></i> 
-        </button>
-        <div className='  d-flex align-items-center flex-nowrap '>
+        </button> */}
+        {/* <div className='  d-flex align-items-center flex-nowrap '>
             <i   className="fa-solid fa-life-ring  text-light "></i>
             <span className='mx-2 fw-bolder '>: 0</span>
-        </div>
-        <NavLink to={'/profile'}><i  className="fa-solid fa-user text-light   "></i></NavLink>
+        </div> */}
+        <NavLink to={'/profile'}><i  className="fa-solid fa-user  "></i></NavLink>
         <NavLink to={'/incomeletter'}><i   className="text-light  fa-solid fa-comment-dots  "></i></NavLink>
         <i  class="fa-solid fa-right-from-bracket  "></i>
       </div>

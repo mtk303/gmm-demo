@@ -10,11 +10,12 @@ const Footer = () => {
     const footerIcons=[
         {img:home,title:'Home',link:'/'},
         {img:promo,title:'Promotion',link:'/promotion'},
-        {img:wallet,title:'Deposit',link:'/deposit'},
+        {img:wallet,title:'Wallet',link:'/deposit'},
         {img:profile,title:'Profile',link:'/profile'},
     ]
   return (
-    <footer style={{background:'#b80000'}} className=' rounded-top-5 px-2 px-sm-5 py-3 fixed-bottom   z-3 d-flex  align-items-center justify-content-between  '>
+    <div className='d-md-none d-block'>
+        <footer style={{background:'#b80000'}} className='rounded-top-5 px-2 px-sm-5 py-3 fixed-bottom   z-3 d-flex  align-items-center justify-content-between  '>
         {footerIcons.map((item)=>{
             return <NavLink to={item.link} className=' d-flex flex-column text-center   align-align-items-center  text-decoration-none '>
                 <img src={item.img} className='footerImg mx-auto ' />
@@ -22,6 +23,7 @@ const Footer = () => {
             </NavLink>
         })}
     </footer>
+    </div>
   )
 }
 

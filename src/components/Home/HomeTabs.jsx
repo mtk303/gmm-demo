@@ -31,7 +31,8 @@ import fish2 from '../../assets/img/homeTab/fish2.png'
 import fish3 from '../../assets/img/homeTab/fish3.png'
 import fish4 from '../../assets/img/homeTab/fish4.png'
 import fish5 from '../../assets/img/homeTab/fish5.png'
-import cock1 from '../../assets/img/homeTab/cock1.png'
+import hot from '../../assets/img/homeTab/hot.png'
+import all from '../../assets/img/homeTab/all.png'
 import horse1 from '../../assets/img/homeTab/horse1.png'
 
 import { FaFireAlt } from "react-icons/fa";
@@ -39,8 +40,8 @@ import { IoMdHome } from "react-icons/io";
 
 function HomeTabs() {
     const tabs=[
-        {id:1,img:<IoMdHome/>,title:'All'},
-        {id:2,img:<FaFireAlt/>,title:'Hot Games'},
+        {id:1,img:all,title:'All'},
+        {id:2,img:hot,title:'Hot Games'},
         {id:3,img:sport,title:'Sports'},
         {id:4,img:esport,title:'E-Sports'},
         {id:5,img:casino,title:'Live Casinos'},
@@ -50,11 +51,13 @@ function HomeTabs() {
         // {id:7,img:horse,title:'Horse Racing'},
     ];
     const contentTabs=[
-        {id:1,imgs:[sport1,sport2,sport3,sport4],title:'Sports'},
-        {id:2,imgs:[esport1,esport1,esport1],title:'E-Sports'},
-        {id:3,imgs:[casino1,casino2,casino3,casino4,casino5,casino6],title:'Live Casinos'},
-        {id:4,imgs:[slot1,slot2,slot3,slot4,slot5,slot6],title:'Slots'},
-        {id:5,imgs:[fish1,fish2,fish3,fish4,fish5],title:'Fish Hunter '}
+      // {id:1,imgs:[sport1,sport2,sport3,sport4],title:'All Games'},
+      {id:2,imgs:[sport1,esport1,casino1,slot1,fish1],title:'Hot Games'},
+        {id:3,imgs:[sport1,sport2,sport3,sport4],title:'Sports'},
+        {id:4,imgs:[esport1,esport1,esport1],title:'E-Sports'},
+        {id:5,imgs:[casino1,casino2,casino3,casino4,casino5,casino6],title:'Live Casinos'},
+        {id:6,imgs:[slot1,slot2,slot3,slot4,slot5,slot6],title:'Slots'},
+        {id:7,imgs:[fish1,fish2,fish3,fish4,fish5],title:'Fish Hunter '}
         // {id:6,imgs:[cock1,cock1,cock1]},
         // {id:7,imgs:[horse1,horse1,horse1]}
     ]
@@ -65,8 +68,9 @@ function HomeTabs() {
           <Nav variant="pills" className="flex-column">
               <Nav.Item>
             {tabs.map((tab)=>{
-            return <Nav.Link  className='categoryCard border rounded-3 mb-1 py-0 py-sm-1 mb-sm-2 px-0 d-flex flex-column align-items-center ' eventKey={tab.id}>
-                <img  className='h-lg-50' src={tab.img} />
+            return <Nav.Link className='categoryCard border rounded-3 mb-1 py-0 py-sm-1 mb-sm-2 px-0 d-flex flex-column align-items-center ' eventKey={tab.id}>
+              
+                <img  className='' style={{height:'35px'}} src={tab.img} />
                 <span className='tabTitle text-center text-light '>{tab.title}</span>
             </Nav.Link>
              })}
@@ -77,13 +81,14 @@ function HomeTabs() {
         <div >
           <Tab.Content>
             <div className="container">
+              <AllGamesContent/>
             {contentTabs.map((item)=>{
                 return <Tab.Pane className='row ' eventKey={item.id}>
-                  <h3 className='fw-bold'>{item.title}</h3>
-                    {item.imgs.map((img)=>{
-                        return <img className='col-12 col-sm-6 col-lg-4 col-xl-3' src={img} />
-                    })}
-                </Tab.Pane>
+                <h3 className='fw-bold'>{item.title}</h3>
+                  {item.imgs.map((img)=>{
+                      return <img className='col-12 col-sm-6 col-lg-4 col-xl-3' src={img} />
+                  })}
+              </Tab.Pane>
 
             })}
             </div>
@@ -95,3 +100,21 @@ function HomeTabs() {
 }
 
 export default HomeTabs;
+
+const AllGamesContent=()=>{
+ const  games= [{id:1,imgs:[sport1,sport2,sport3,sport4],title:'Sports'},
+  {id:2,imgs:[esport1,esport1,esport1],title:'E-Sports'},
+  {id:3,imgs:[casino1,casino2,casino3,casino4,casino5,casino6],title:'Live Casinos'},
+  {id:4,imgs:[slot1,slot2,slot3,slot4,slot5,slot6],title:'Slots'},
+  {id:5,imgs:[fish1,fish2,fish3,fish4,fish5],title:'Fish Hunter '}]
+  return  <Tab.Pane className='row ' eventKey={1}>
+     {games.map((game)=>{
+      return  <div className='row mb-4'>
+        <h3 className='fw-bold'>{game.title}</h3>
+      {game.imgs.map((img)=>{
+          return <img className='col-12 col-sm-6 col-lg-4 col-xl-3' src={img} />
+      })}</div>
+     })}
+    </Tab.Pane>
+   
+}

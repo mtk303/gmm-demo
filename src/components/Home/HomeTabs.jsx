@@ -34,28 +34,33 @@ import fish5 from '../../assets/img/homeTab/fish5.png'
 import cock1 from '../../assets/img/homeTab/cock1.png'
 import horse1 from '../../assets/img/homeTab/horse1.png'
 
+import { FaFireAlt } from "react-icons/fa";
+import { IoMdHome } from "react-icons/io";
+
 function HomeTabs() {
     const tabs=[
-        {id:1,img:sport,title:'Sports'},
-        {id:2,img:esport,title:'E-Sports'},
-        {id:3,img:casino,title:'Live Casinos'},
-        {id:4,img:slots,title:'Slots'},
-        {id:5,img:fish,title:'Fish Hunter '},
-        {id:6,img:cock,title:'Cock Fighting'},
-        {id:7,img:horse,title:'Horse Racing'},
+        {id:1,img:<IoMdHome/>,title:'All'},
+        {id:2,img:<FaFireAlt/>,title:'Hot Games'},
+        {id:3,img:sport,title:'Sports'},
+        {id:4,img:esport,title:'E-Sports'},
+        {id:5,img:casino,title:'Live Casinos'},
+        {id:6,img:slots,title:'Slots'},
+        {id:7,img:fish,title:'Fish Hunter '}
+        // {id:6,img:cock,title:'Cock Fighting'},
+        // {id:7,img:horse,title:'Horse Racing'},
     ];
     const contentTabs=[
-        {id:1,imgs:[sport1,sport2,sport3,sport4]},
-        {id:2,imgs:[esport1,esport1,esport1]},
-        {id:3,imgs:[casino1,casino2,casino3,casino4,casino5,casino6]},
-        {id:4,imgs:[slot1,slot2,slot3,slot4,slot5,slot6]},
-        {id:5,imgs:[fish1,fish2,fish3,fish4,fish5]},
-        {id:6,imgs:[cock1,cock1,cock1]},
-        {id:7,imgs:[horse1,horse1,horse1]}
+        {id:1,imgs:[sport1,sport2,sport3,sport4],title:'Sports'},
+        {id:2,imgs:[esport1,esport1,esport1],title:'E-Sports'},
+        {id:3,imgs:[casino1,casino2,casino3,casino4,casino5,casino6],title:'Live Casinos'},
+        {id:4,imgs:[slot1,slot2,slot3,slot4,slot5,slot6],title:'Slots'},
+        {id:5,imgs:[fish1,fish2,fish3,fish4,fish5],title:'Fish Hunter '}
+        // {id:6,imgs:[cock1,cock1,cock1]},
+        // {id:7,imgs:[horse1,horse1,horse1]}
     ]
   return (
     <Tab.Container  id="left-tabs-example" defaultActiveKey={1}>
-      <div className='mt-5 d-flex  flex-nowrap '>
+      <div className='mt-5 d-flex  flex-nowrap mx-md-5 mx-2'>
         <div >
           <Nav variant="pills" className="flex-column">
               <Nav.Item>
@@ -74,6 +79,7 @@ function HomeTabs() {
             <div className="container">
             {contentTabs.map((item)=>{
                 return <Tab.Pane className='row ' eventKey={item.id}>
+                  <h3 className='fw-bold'>{item.title}</h3>
                     {item.imgs.map((img)=>{
                         return <img className='col-12 col-sm-6 col-lg-4 col-xl-3' src={img} />
                     })}

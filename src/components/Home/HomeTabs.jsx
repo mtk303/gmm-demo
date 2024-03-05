@@ -37,6 +37,7 @@ import horse1 from '../../assets/img/homeTab/horse1.png'
 
 import { FaFireAlt } from "react-icons/fa";
 import { IoMdHome } from "react-icons/io";
+import { NavLink } from 'react-router-dom';
 
 function HomeTabs() {
     const tabs=[
@@ -68,7 +69,7 @@ function HomeTabs() {
           <Nav variant="pills" className="flex-column">
               <Nav.Item>
             {tabs.map((tab)=>{
-            return <Nav.Link className='categoryCard border rounded-3 mb-1 py-0 py-sm-1 mb-sm-2 px-0 d-flex flex-column align-items-center ' eventKey={tab.id}>
+            return <Nav.Link   className='categoryCard border rounded-3 mb-1 py-0 py-sm-1 mb-sm-2 px-0 d-flex flex-column align-items-center ' eventKey={tab.id}>
               
                 <img  className='' style={{height:'35px'}} src={tab.img} />
                 <span className='tabTitle text-center text-light '>{tab.title}</span>
@@ -84,10 +85,15 @@ function HomeTabs() {
               <AllGamesContent/>
             {contentTabs.map((item)=>{
                 return <Tab.Pane className='row ' eventKey={item.id}>
-                <h3 className='fw-bold'>{item.title}</h3>
+               
+               <h3 className='fw-bold'>{item.title}</h3>
                   {item.imgs.map((img)=>{
-                      return <img className='col-12 col-sm-6 col-lg-4 col-xl-3' src={img} />
+                      return  <div className='col-12 col-sm-6 col-lg-4 col-xl-3'>
+                       <NavLink to={'/games'}>
+                        <img  src={img} style={{width:'100%',height:'100%'}} /> </NavLink>
+                       </div>
                   })}
+              
               </Tab.Pane>
 
             })}
@@ -112,7 +118,9 @@ const AllGamesContent=()=>{
       return  <div className='row mb-4'>
         <h3 className='fw-bold'>{game.title}</h3>
       {game.imgs.map((img)=>{
-          return <img className='col-12 col-sm-6 col-lg-4 col-xl-3' src={img} />
+          return <div className='col-12 col-sm-6 col-lg-4 col-xl-3'>
+          <NavLink to={'/games'}><img  style={{width:'100%',height:'100%'}}  src={img} /> </NavLink>
+          </div>
       })}</div>
      })}
     </Tab.Pane>

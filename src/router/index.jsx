@@ -9,6 +9,7 @@ import Incomeletter from "../pages/Incomeletter";
 import LoginPage from "../pages/Login";
 import RegisterPage from "../pages/Register";
 import PromotionPage from "../pages/Promotion";
+import LaunchGames from "../pages/LaunchGames";
 
 const router = createBrowserRouter([
    
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
         {
           path : "/",
           element : <Home />
+        },
+        {
+          path : "/games",
+          element : <LaunchGames />
         },
         {
           path : "/profile",

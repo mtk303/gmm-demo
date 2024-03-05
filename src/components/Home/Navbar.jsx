@@ -54,7 +54,7 @@ const Navbar = () => {
         
         <button className='btn text-light  text-uppercase fw-bold px-5 d-sm-block d-none' style={{background:'#8a2424'}}>Log out</button>
         <div className='d-sm-none d-block'>
-        <IoLogOut size={30} style={{color:'#ccc'}} />
+        <IoLogOut size={30} color='#fff5e1' />
         </div >
         {/* <button className='border border-none bg-transparent' style={{outline:'none'}} onClick={handleShow}>
           <i className=" fa-solid fa-wallet  text-light "></i> 
@@ -63,9 +63,9 @@ const Navbar = () => {
             <i   className="fa-solid fa-life-ring  text-light "></i>
             <span className='mx-2 fw-bolder '>: 0</span>
         </div> */}
-        <NavLink to={'/profile'}><i  className="fa-solid fa-user  "></i></NavLink>
+        {/* <NavLink to={'/profile'}><i  className="fa-solid fa-user  "></i></NavLink>
         <NavLink to={'/incomeletter'}><i   className="text-light  fa-solid fa-comment-dots  "></i></NavLink>
-        <i  class="fa-solid fa-right-from-bracket  "></i>
+        <i  class="fa-solid fa-right-from-bracket  "></i> */}
       </div>
       <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>

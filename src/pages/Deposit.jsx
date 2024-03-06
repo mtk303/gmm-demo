@@ -52,7 +52,8 @@ const Deposit = () => {
   return (
     <>
 
-      <div className='ms-md-5 ms-3' style={{color:'#333'}}>
+      <div className='deposit-width'>
+      <div className='ms-md-5 ms-3 mt-5' style={{color:'#333'}}>
         <small>လက်ကျန်ငွေ ( MMK )</small>
         <p className='fw-bold'>0.00</p>
       </div>
@@ -206,6 +207,7 @@ const Deposit = () => {
         </div>
       </Tab>
     </Tabs>
+      </div>
     </>
   )
 }

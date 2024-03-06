@@ -24,7 +24,8 @@ const Profile = () => {
   return (
     <>
 
-        <div className='d-flex justify-content-center align-items-center'>
+        <div className='profile-width'>
+        <div className='d-flex justify-content-center align-items-center mt-3'>
           <img src={avatar} alt="" />
           <div className='mx-3'>
             <p className='fw-bold h3' style={{color:'#333'}}>Angel</p>
@@ -166,6 +167,7 @@ const Profile = () => {
         </div>
       </Tab>
     </Tabs>
+        </div>
     </>
   )
 }
